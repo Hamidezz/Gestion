@@ -8,7 +8,7 @@ import {
 } from '../constants/orderConstant'
 
 export const createOrderReducer = (
-  state = {},
+  state = { order: {} },
   action
 ) => {
   switch (action.type) {
@@ -34,7 +34,7 @@ export const createOrderReducer = (
 }
 
 export const getOrdersReducer = (
-  state = {},
+  state = { orders: [] },
   action
 ) => {
   switch (action.type) {

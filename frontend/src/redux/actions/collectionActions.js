@@ -87,6 +87,7 @@ export const getCollections =
         type: GET_COLLECTIONS_SUCCESS,
         payload: data,
       })
+
       console.log(data)
     } catch (err) {
       console.log(err)
@@ -113,6 +114,8 @@ export const addCateToColl =
         loginState: {
           userInfo: { token },
         },
+
+        collectionsState: { collections },
       } = getState()
 
       const config = {
@@ -131,6 +134,15 @@ export const addCateToColl =
       dispatch({
         type: ADD_COLL_TO_CATE_SUCCESS,
         payload: data,
+      })
+
+      // remove coll from collection state
+      const filtercollections = collections.filter(
+        (coll) => coll._id !== collId
+      )
+      dispatch({
+        type: GET_COLLECTIONS_SUCCESS,
+        payload: { data: filtercollections },
       })
     } catch (err) {
       console.log(err)

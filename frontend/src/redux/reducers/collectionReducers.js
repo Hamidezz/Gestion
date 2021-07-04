@@ -16,7 +16,7 @@ import {
 } from '../constants/collectionConstant'
 
 export const createCollectionReducer = (
-  state = {},
+  state = { collection: {} },
   action
 ) => {
   switch (action.type) {
@@ -43,7 +43,7 @@ export const createCollectionReducer = (
 
 // get collections
 export const getCollectionReducer = (
-  state = {},
+  state = { collections: [] },
   action
 ) => {
   switch (action.type) {

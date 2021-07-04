@@ -43,7 +43,7 @@ export const getDocsReducer = (
 }
 
 export const getSingleDocReducer = (
-  state = {},
+  state = { document: {} },
   action
 ) => {
   switch (action.type) {
@@ -68,7 +68,7 @@ export const getSingleDocReducer = (
 }
 
 export const createDocReducer = (
-  state = {},
+  state = { document: {} },
   action
 ) => {
   switch (action.type) {
@@ -96,7 +96,7 @@ export const createDocReducer = (
 }
 
 export const updateDocumentReducer = (
-  state = {},
+  state = { document: {} },
   action
 ) => {
   switch (action.type) {

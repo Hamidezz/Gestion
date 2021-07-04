@@ -54,7 +54,7 @@ export const logout =
   (history) => async (dispatch) => {
     localStorage.removeItem('userInfo')
     dispatch({ type: USER_LOGOUT })
-    history.push('/')
+    history.push('/login')
   }
 
 export const register =

@@ -51,7 +51,7 @@ const Register = () => {
   )
   useEffect(() => {
     if (!userInfo  || isAuthorised('admin') === false) {
-      history.push('/')
+      history.push('/login')
     }
   }, [userInfo, history,isAuthorised])
 

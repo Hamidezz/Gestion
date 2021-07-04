@@ -36,7 +36,7 @@ export const getCategoriesReducer = (
 }
 
 export const createNewCateReducer = (
-  state = { category: [] },
+  state = { categories: {} },
   action
 ) => {
   switch (action.type) {
